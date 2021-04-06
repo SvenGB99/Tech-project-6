@@ -28,18 +28,18 @@ startButton.addEventListener('click',() => {
 
 function getRandomPhraseAsArray(arr){
     //do stuff to any arr that is passed in 
-    const randomNumber = Math.floor(Math.random() * arr.lenght);
+    const randomNumber = Math.floor(Math.random() * arr.length);
     const randomPhrase = arr[randomNumber];
-    const characters = randomPhrase.split(''); //split the string into new array of characters
+    const characters = randomPhrase.split(' '); //split the string into new array of characters
     return characters; // return new array of characters
 } 
 
 function addPhraseToDisplay(arr){
     // do stuff any arr that is passed in, and add to `#phrase ul`
-    for (let i = 0; i < arr.lenght; i++) {
+    for (let i = 0; i < arr.length; i++) {
         const li = document.createElement('li'); //ceeate a list item
         li.textContent = arr[i];
-        phraseUl.append(li); //put the characters inside the list
+        phraseUL.append(li); //put the characters inside the list
         const letters = /^[0-9a-zA-Z]+$/;
         if (li.textContent.match(letters)) {
             li.className = 'letter';
@@ -93,7 +93,7 @@ function checkWin() {
     const shownLetters = document.querySelectorAll('.show');
     const h3 = document.createElement('h3');
 
-    if (shownLetters.lenght === totalLetters.lenght) {
+    if (shownLetters.length === totalLetters.length) {
         removeShowClass();
         overlay.className = 'win';
         overlay.style.display = 'flex';
@@ -111,7 +111,7 @@ function checkWin() {
 }
 
 function removeShowClass() {
-    for (let i = 0; i < phraseUL.children.lenght; i++) {
+    for (let i = 0; i < phraseUL.children.length; i++) {
         phraseUL.children[i].classList.remove('show');
     }
 }

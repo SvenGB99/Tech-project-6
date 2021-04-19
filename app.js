@@ -2,8 +2,10 @@
 //Variables
 const keyBoard = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
-const startGame = document.getElementById('btn__reset')
+const startGame = document.getElementsByClassName('btn__reset')
 const headding= document.querySelector('h2')
+
+//missed start at 0 always
 let missed = 0;
 
 
@@ -19,20 +21,16 @@ const phrases = [
 
 
 //event listener for click of start button
-startGame.addEventListener('click', ()=> {
-    // overlay.style.display = 'none'
-    alert('this made it throgh')
+startGame[0].addEventListener('click', () =>{
+    overlay.style.display = 'none'
+    console.log('this made it through');
 });
 
 //using the length to get a randome number 
-function getRandomPhrase(arr) {
-    const randomPhrase = Math.floor( Math.random() * phrases.length) + 1
-    alert(randomPhreae)
+function getRandomPhraseChoice(arr) {
+    const rP = Math.floor(Math.random() * arr.length );
+    // this will chose the phrase from the array
+    const randomPhrase = arr[rP];
+    alert(randomPhraseChoice);
 }
 
-//get random phrase from array
-function phraseChoice(arr) {
-    for (  let i = 0; i = arr.length; i++) {
-
-    }
-}

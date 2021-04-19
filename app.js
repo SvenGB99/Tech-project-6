@@ -26,11 +26,17 @@ startGame[0].addEventListener('click', () =>{
     console.log('this made it through');
 });
 
-//using the length to get a randome number 
-function getRandomPhraseChoice(arr) {
-    const rP = Math.floor(Math.random() * arr.length );
-    // this will chose the phrase from the array
-    const randomPhrase = arr[rP];
-    alert(randomPhraseChoice);
-}
+// //using the length to get a randome number 
+// function getRandomPhraseChoice( arr ) {
+//     let rP = Math.floor(Math.random() * arr.length );
+//     return rP;
+//     // this will chose the phrase from the array
+//     const randomPhrase = arr[rP];
+//     alert(getRandomPhraseChoice);
+// }
 
+function randomNumber() {
+    let randomN = Math.floor(Math.random() * phrases.length) +1;
+    return randomN;
+    alert(randomN)
+}

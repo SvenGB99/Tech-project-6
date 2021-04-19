@@ -111,16 +111,6 @@ button {
   color: #FFFFFF;
 }
 
-.btn {
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #37474F;
-  color: aliceblue;
-
-}
-
 .btn__reset {
   padding: 8px;
   margin: 50px auto;

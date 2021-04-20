@@ -1,16 +1,16 @@
 
-//Variables
+// Variables
 const keyBoard = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
-const startGame = document.getElementsByClassName('btn__reset')
-const headding= document.querySelector('h2')
+const startGame = document.querySelector('.btn__reset')
 
-//missed start at 0 always
+
+// missed start at 0 always
 let missed = 0;
 
 
 // phrases
-const phrases = [
+const list = [
     'I had the time of my life',
     'bouncing is what tiggers do best',
     'if i had a million dollars',
@@ -20,13 +20,13 @@ const phrases = [
 ];
 
 
-//event listener for click of start button
-startGame[0].addEventListener('click', () =>{
+// event listener for click of start button
+startGame.addEventListener('click', () =>{
     overlay.style.display = 'none'
     console.log('this made it through');
 });
 
-// //using the length to get a randome number 
+// using the length to get a randome number 
 // function getRandomPhraseChoice( arr ) {
 //     let rP = Math.floor(Math.random() * arr.length );
 //     return rP;
@@ -35,8 +35,13 @@ startGame[0].addEventListener('click', () =>{
 //     alert(getRandomPhraseChoice);
 // }
 
-function randomNumber() {
-    let randomN = Math.floor(Math.random() * phrases.length) +1;
-    return randomN;
-    alert(randomN)
+function getRandomPhrase(arr) {
+    const randomP = arr[Math.floor(Math.random() * arr.length)+1];
+    // call random number;
+    console.log(randomP);
+    // getRandomNumber()
+    // alert(randomNumber)
+    
+    
 }
+

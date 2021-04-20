@@ -2,7 +2,8 @@
 // Variables
 const keyBoard = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
-const startGame = document.querySelector('.btn__reset')
+const startGame = document.querySelector('.btn__reset');
+const listUl = document.querySelector('ul');
 
 
 // missed start at 0 always
@@ -20,28 +21,27 @@ const list = [
 ];
 
 
+// Variables
+
 // event listener for click of start button
-startGame.addEventListener('click', () =>{
+startGame.addEventListener('click', () => {
     overlay.style.display = 'none'
     console.log('this made it through');
 });
 
-// using the length to get a randome number 
-// function getRandomPhraseChoice( arr ) {
-//     let rP = Math.floor(Math.random() * arr.length );
-//     return rP;
-//     // this will chose the phrase from the array
-//     const randomPhrase = arr[rP];
-//     alert(getRandomPhraseChoice);
-// }
-
+// get random phrase from arry via random number selection
 function getRandomPhrase(arr) {
-    const randomP = arr[Math.floor(Math.random() * arr.length)+1];
-    // call random number;
-    console.log(randomP);
-    // getRandomNumber()
-    // alert(randomNumber)
-    
-    
+    const randomP = arr[Math.floor(Math.random() * arr.length)];
+    getRandomPhrase(list);
 }
 
+// displaying the phrase in the gameshow
+function addPhraseToDisplay(arr) {
+    let phrase = getRandomPhrase(list);
+    for(let i = 0; i < arr.length; i++) {
+        
+        // let addListItem = document.creatElement('li');
+        // listUl.appendChild(addListItem)
+        // addListItem.textContent = array[i]
+    }
+}

@@ -34,16 +34,15 @@ startGame.addEventListener('click', () => {
 // get random phrase from arry via random number selection and split the em up
 function getRandomPhrase(arr) {
     let randomP = arr[Math.floor(Math.random() * arr.length)];
-    console.log(randomP);
+    return randomP;
 }
 
-getRandomPhrase(list)
-
+let newP = getRandomPhrase(list);
 
 // creat addPhraseToDisplay function
 
-function addPhraseToDisplay () {
-    for( let i = 0; i < getRandomPhrase.lenght; i++) {
+function addPhraseToDisplay(arr) {
+    for( let i = 0; i < newP.length; i++) {
         const li = document.createElement('li');
         listUl.appendChild(li);
         li.textContent = arr[i];
@@ -56,8 +55,7 @@ function addPhraseToDisplay () {
     }
 }
 
-
-const randomPhrase = getRandomPhrase(phrase);
+const randomPhrase = getRandomPhrase(list);
 
 addPhraseToDisplay(randomPhrase)
 
@@ -65,7 +63,7 @@ addPhraseToDisplay(randomPhrase)
 const checkletter = (button) => {
     let matched = null;
     for( i = 0; i < letter.length; i++ ) {
-        if (button === letters[i].textContent.toUppeCase()) {
+        if (keyBoard === letters[i].textContent.toUppeCase()) {
             letter[i].classList.add('show');
             matched = true;
         }

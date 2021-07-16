@@ -4,7 +4,7 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
+  
   --color-lose: #D94545;
   --color-start: #5b85b7;
   --color-neutral: #445069;
@@ -14,6 +14,8 @@
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all .2s ease-in-out;
+  --color-win: #fff;
+  --color-win2: rgb(9, 255, 0);
 }
 
 /* main */
@@ -112,12 +114,14 @@ button {
 }
 
 .btn__reset {
+  font-weight: bold;
   padding: 8px;
   margin: 50px auto;
-  background: #FFFFFF;
+  background: rgb(1, 138, 1);
   border-radius: 5px;
   font-size: var(--font-size-medium);
   cursor:pointer;
+  z-index: 1;
 }
 
 /* Overlay */
@@ -148,7 +152,7 @@ button {
 }
 
 .win {
-  background-color: var(--color-win);
+  background-color: var(--color-win2);
 }
 
 .win a {
